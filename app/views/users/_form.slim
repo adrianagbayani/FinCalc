@@ -1,0 +1,21 @@
+h2 Create Cashflow
+
+= form_for([current_user, Cashflow.new]) do |f|
+  = f.hidden_field :user, value: current_user.id
+  .form-inline.col-md-12
+    .control-label.col-md-3
+      = f.label :category
+
+    .input-group.col-md-9
+      = f.select :category, @categories.collect {|option| [option.name, option.id]}, {}, class: 'form-control'
+
+  .form-inline.col-md-12
+    .control-label.col-md-3
+      = f.label :amount
+
+    .input-group.col-md-9
+      = f.text_field :amount, class: 'form-control'
+
+  .form-inline.col-md-12
+    .form_action
+      = f.submit "Create", class: "btn pull-right"

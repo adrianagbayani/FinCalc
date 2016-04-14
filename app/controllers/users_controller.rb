@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
-  	@users = User.all
+  	@categories = Category.all
+    @categories = @categories.empty? ? [Category.new({name: "No Categories"})] : @categories
   end
 
   def show

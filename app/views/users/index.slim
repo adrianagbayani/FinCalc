@@ -1,0 +1,19 @@
+id#container
+  id#left_panel.col-md-3
+    id#cashflow_form.col-md-12
+      = render "form"
+      = render "latest_cashflow"
+
+  id#content_panel.col-md-9
+    ul.nav.nav-tabs
+     li.active
+        a data-toggle="tab" href="#cashflow_list" Cashflow List
+     li
+      a data-toggle="tab" href="#cashflow_calendar" Cashflow Calendar
+
+    .tab-content
+      #cashflow_list.tab-pane.fade.in.active
+
+      #cashflow_calendar.tab-pane.fade
+        = month_calendar do |date|
+          = date

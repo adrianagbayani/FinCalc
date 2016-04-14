@@ -12,4 +12,37 @@
  *
  *= require_tree .
  *= require_self
+ *= require simple_calendar
+ *= require bootstrap_and_overrides
  */
+
+body {
+  margin: 0;
+}
+
+.header {
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-weight: strong;
+}
+
+.form-inline {
+  padding-top: 10px;
+}
+
+#cashflow_form {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+#cashflow_form .form-inline {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#cashflow_form .control-label {
+  padding-top: 6px;
+}
